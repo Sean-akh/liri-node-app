@@ -7,24 +7,13 @@
     var Spotify = require('node-spotify-api');
     var Twitter = require('twitter');
 
-// check the connection to the keys
-// console.log("---------------------------------- \n");
-// console.log("Twitter Key: " + Twitter + "\n");
-// console.log("---------------------------------- \n");
-// console.log("Spotify Key: " + Spotify + "\n");
-// console.log("---------------------------------- \n");
-
-
     var client = new Twitter({
         consumer_key: process.env.TWITTER_CONSUMER_KEY,
         consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
         access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
         access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
     });
-//console.log("-----Twitter----- \n" + client + "\n -------------- \n");
-
     var spotify = new Spotify(keys.spotify);
-//console.log("----Spotify------ \n" + spotify + "\n -------------- \n");
 
     //find out what the user want to view
     inquirer.prompt(
@@ -41,8 +30,6 @@
                 if (inquirerResponse.choice === "Twitter") {
                     var screenName = {screen_name: 'sean_a_project'};
                     client.get('statuses/user_timeline', screenName, function(error, tweets, response) {
-console.log("\n Tweets are" + tweets + "\n");
-console.log("Response is: " + response + "\n");
                        if(!error){
                             for (var i = 0; i < 10; i++) {
                                var dateCreated = tweets[i].created_at.slice(0, 19);
@@ -102,7 +89,6 @@ console.log("Response is: " + response + "\n");
 
                 /***********MOVIE starts****************/
                 else if (inquirerResponse.choice === "Movie") {
-//console.log("The choice is movie");
                     //ask for the name of the Movie
                     inquirer.prompt([{
                         type: "input",
@@ -112,11 +98,8 @@ console.log("Response is: " + response + "\n");
                     //Then Do OMDB Query and get the response
                     .then(function(inquirerResponse) {
                         var movieName = inquirerResponse.movieName;
-//console.log("The movie is: "+ movieName);
                         var key = "apikey=trilogy";
                         var queryURL = "https://www.omdbapi.com/?" + key + "&t=" + movieName.split(' ').join('+') + "&y=&plot=long&tomatoes=true&r=json";
-
-//console.log("the url query is: " + queryURL);
 
                         request(queryURL, function(error, response, body){
                             if (error){
@@ -155,8 +138,6 @@ console.log("Response is: " + response + "\n");
                         });
                     });                  
             }
-                /***********Random event ****************/
-
                 /***********ASK TO SELECT****************/
                 else {
 console.log("Please choose an option");
