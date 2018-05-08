@@ -1,0 +1,32 @@
+ 
+---------- Music --------
+ Artist: Sting
+ Song: Fields Of Gold
+ Preview Here: null
+ Album: Ten Summoner's Tales
+ ------------------ 
+ 
+---------- Movie --------
+ Title: The Hunt for Red October
+Year: 1990
+Rated: PG
+Language: English, Russian
+Rotten Tomato Rating: N/A
+IMDB Rating: 7.6
+Movie Plot: In November 1984, the Soviet Union's best submarine captain in their newest sub violates orders and heads for the USA. Is he trying to defect or to start a war?
+Actors: Sean Connery, Alec Baldwin, Scott Glenn, Sam Neill
+Countries: USA
+
+ ------------------ 
+---------- Movie --------
+Title: Batman
+Year: 1989
+Rated: PG-13
+Language: English, French, Spanish
+Rotten Tomato Rating: N/A
+IMDB Rating: 7.6
+Movie Plot: The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker.
+Actors: Michael Keaton, Jack Nicholson, Kim Basinger, Robert Wuhl
+Countries: USA, UK
+
+ ------------------
